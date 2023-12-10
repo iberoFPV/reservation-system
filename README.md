@@ -1,6 +1,11 @@
 # Proyecto Javascript - Simulador de Reservas
 
+- **Enlace a netlify:** https://reservation-system-js.netlify.app/
+
+- **Prueba del proyecto:** Para experimentar con todas las funcionalidades del proyecto, se recomienda realizar una copia local o descargar el repositorio. Esto permitirá una prueba completa y personalizada de las características implementadas
+
 - **Carga de Servicios:** La función `populateServicesSelect` carga la lista de servicios disponibles desde un archivo JSON y los muestra como opciones en un elemento de selección HTML.
+
 - **Formulario de Reserva:** El formulario de reserva permite a los usuarios ingresar su nombre, número de teléfono, fecha, hora y seleccionar un servicio.
 
 - **Almacenamiento de Reservas:** La función `saveReservation` toma los datos del formulario, verifica si hay conflictos con reservas existentes o datos mal introducidos y, si no hay conflictos, guarda la reserva en el almacenamiento local del navegador.
