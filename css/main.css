@@ -1,0 +1,175 @@
+/* Estilo general del cuerpo del documento */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Estilo para elementos con clase 'system' */
+.system {
+  color: #0013e0;
+  text-align: center;
+}
+
+/* Estilo para el formulario */
+form {
+  background-color: #f9f9f9;
+  padding: 4rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Estilo para las etiquetas en el formulario */
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+/* Estilo para los campos de entrada en el formulario */
+input {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+/* Estilo para el campo de selección en el formulario */
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+/* Estilo para el botón en el formulario */
+.button {
+  background-color: #03369d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}
+
+/* Estilo para el botón al pasar el ratón sobre él */
+.button:hover {
+  background-color: #1c55f1;
+}
+
+/* Estilos para la lista de reservas */
+#reservationsList {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#reservationsList h3 {
+  color: #1b9605;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#reservations {
+  list-style: none;
+  padding: 0;
+}
+
+#reservations li {
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+/* Estilos para los botones dentro de la lista de reservas */
+#reservations li button {
+  background-color: #ff3232;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Estilos para botones generales con clase 'btn' */
+.btn {
+  padding: 1rem;
+  margin-left: 1rem;
+}
+
+/* Estilos para botones de éxito y peligro */
+.btn-success {
+  background-color: #ff0000;
+  color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-danger {
+  background-color: #23af00;
+  color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 9%;
+}
+
+.footer-text p {
+  font-size: 1rem;
+}
+
+.contact-info p {
+  font-size: 1rem;
+}
+
+@media (max-width:462px) {
+  .footer {
+      flex-direction: column-reverse;
+  }
+
+  .footer p {
+      margin-top: 2rem;
+      text-align: center;
+  }
+}
+
+@media (max-width:991px) {
+  .footer {
+      padding: 2rem 4%;
+  }
+}
+
+a {
+  text-decoration: none; /* Elimina la línea subrayada del enlace */
+  color: #3498db; /* Color azul */
+}

@@ -1,0 +1,6 @@
+[
+    {"name": "Cambio de neumaticos", "value": "service1"},
+    {"name": "Cambio de aceite", "value": "service2"},
+    {"name": "Cambio de filtros", "value": "service3"},
+    {"name": "Mantenimiento general", "value": "service4"}
+]

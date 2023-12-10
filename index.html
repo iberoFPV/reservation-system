@@ -1,0 +1,86 @@
+<!doctype html>
+<html class="no-js" lang="es"><!-- Idioma de la web -->
+
+<head>
+  <!-- Codificación-->
+  <meta charset="utf-8">
+  <!-- Título para el navegador y los buscadores -->
+  <title></title>
+  <!-- Descripción de la página para los buscadores -->
+  <meta name="description" content="Sistema de reservas">
+  <!-- Para que la web sea responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Autor de la página -->
+  <meta name="author" content="Bruno Orgilles">
+  <!--  -->
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <!-- Coloca el favicon en el directorio raiz -->
+  <link rel="apple-touch-icon" href="icon.png"><!-- Linea a borrar para favicon nuevo -->
+  <!-- Carga de normalize.css y main.css -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <!-- Para algunos navegadores móviles -->
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+  <!-- Precarga libreria mensajes de alerta -->
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <h2 class="system">Sistema de Reservas</h2>
+  <form id="reservationForm">
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" required><br>
+
+    <label for="phone">Teléfono:</label>
+    <input type="tel" id="phone" required><br>
+
+    <label for="date">Fecha:</label>
+    <input type="date" id="date" required><br>
+
+    <label for="time">Hora:</label>
+    <input type="time" id="time" required><br>
+
+    <label for="service">Servicio:</label>
+    <select id="service" required>
+        <option value="" disabled selected>Selecciona un servicio</option>
+    </select><br>
+
+    <button class="button" type="submit">Reservar</button>
+  </form>
+
+  <div data-aos="fade-up" id="statusMessage"></div>
+  <div id="reservationsList">
+    <h3>Mis Reservas:</h3>
+    <ul id="reservations"></ul>
+  </div>
+      <!-- footer design -->
+
+  <footer class="footer">
+    <div class="footer-text contact-info">
+        <p>
+          <a href="https://code-cube.netlify.app/">Contact me</a>
+        </p>
+        <p><i class='bx bx-envelope'></i>   buruno_88@hotmail.com</p>
+    </div>
+  </footer>
+
+  <!-- caraga de mensajes de alerta modernos -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.all.min.js"></script>
+  <!-- Carga de archivos js y modernizr -->
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: cambia UA-XXXXX-Y para que sea el ID de tu sitio. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
