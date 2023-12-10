@@ -22,7 +22,7 @@ form {
   padding: 4rem;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  max-width: 50%;
+  max-width: 400px;
   width: 100%;
 }
 
@@ -76,7 +76,7 @@ select {
   padding: 4rem;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  max-width: 50%;
+  max-width: 400px;
   width: 100%;
   margin-top: 20px;
 }
@@ -163,9 +163,28 @@ select {
   }
 }
 
+@media (max-width:200px) {
+
+  #reservationsList {
+    max-width: 20%;
+  }
+
+  form {
+    max-width: 20%;
+  }
+}
+
 @media (max-width:991px) {
   .footer {
       padding: 2rem 4%;
+  }
+
+  #reservationsList {
+    max-width: 50%;
+  }
+
+  form {
+    max-width: 50%;
   }
 }
 
