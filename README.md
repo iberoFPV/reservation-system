@@ -1,6 +1,6 @@
 # Proyecto Javascript - Simulador de Reservas
 
-- **Enlace a netlify:** https://reservation-system-js.netlify.app/
+- **Enlace a netlify:** https://sistem-reservas.netlify.app/
 
 - **Prueba del proyecto:** Para experimentar con todas las funcionalidades del proyecto, se recomienda realizar una copia local o descargar el repositorio. Esto permitirá una prueba completa y personalizada de las características implementadas
 
