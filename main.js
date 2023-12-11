@@ -1,34 +1,3 @@
-// Función asincrónica para llenar el campo de selección de servicios
-const populateServicesSelect = async () => {
-    // Obtiene la referencia al elemento de selección (dropdown) por su ID
-    const selectElement = document.getElementById('service');
-    try {
-        // Realiza una solicitud para obtener datos de un archivo JSON local
-        const response = await fetch('./json/service.json');
-        // Convierte la respuesta a formato JSON
-        const services = await response.json();
-
-        // Itera sobre cada servicio y crea una opción para cada uno en el dropdown
-        services.forEach((service) => {
-            const optionElement = document.createElement('option');
-            optionElement.value = service.value;
-            optionElement.textContent = service.name;
-            selectElement.appendChild(optionElement);
-        });
-    } catch (error) {
-        // Maneja errores, muestra una alerta usando la biblioteca SweetAlert2
-        Swal.fire({
-            icon: 'error',
-            title: 'Error 404',
-            text: 'Error al cargar los servicios',
-            footer: '<a href="https://support.google.com/webmasters/answer/2445990?hl=es">¿Por qué tengo este problema?</a>'
-        });
-    }
-};
-
-// Llama a la función para poblar el dropdown con servicios al cargar la página
-populateServicesSelect();
-
 // Función para obtener datos del formulario
 const getFormData = () => {
     // Obtiene los valores de varios campos del formulario por sus ID
@@ -40,19 +9,14 @@ const getFormData = () => {
     return { name, phone, date, time, service };
 };
 
-// Función para guardar una reserva
 const saveReservation = () => {
-    // Obtiene datos del formulario y las reservas existentes
     const reservationData = getFormData();
     const reservations = getReservations();
 
-    
-    // Verifica si la fecha introducida es anterior a la fecha actual
     const inputDate = new Date(reservationData.date);
     const currentDate = new Date();
 
     if (inputDate < currentDate) {
-        // Muestra una alerta si la fecha es anterior a la actual
         Swal.fire({
             title: 'Error de fecha',
             icon: 'error',
@@ -61,9 +25,7 @@ const saveReservation = () => {
         return;
     }
 
-    // Verifica si el campo de teléfono contiene solo números
     if (!/^\d+$/.test(reservationData.phone)) {
-        // Muestra una alerta si el teléfono contiene letras u otros caracteres
         Swal.fire({
             title: 'Error de teléfono',
             icon: 'error',
@@ -72,13 +34,11 @@ const saveReservation = () => {
         return;
     }
 
-    // Verifica si el horario de la reserva está entre las 9:00 y las 19:00
     const reservationTime = new Date(`2000-01-01T${reservationData.time}`);
     const openingTime = new Date(`2000-01-01T09:00:00`);
     const closingTime = new Date(`2000-01-01T19:00:00`);
 
     if (reservationTime < openingTime || reservationTime > closingTime) {
-        // Muestra una alerta si el horario no está dentro del rango permitido
         Swal.fire({
             title: 'Error de horario',
             icon: 'error',
@@ -87,12 +47,10 @@ const saveReservation = () => {
         return;
     }
 
-    // Verifica si ya existe una reserva para la misma fecha y hora
     const isDuplicateReservation = reservations.some((reservation) => {
         return reservation.date === reservationData.date && reservation.time === reservationData.time;
     });
 
-    // Si es una reserva duplicada, muestra una alerta de error
     if (isDuplicateReservation) {
         Swal.fire({
             title: 'Ya existe una reserva para esa fecha y hora',
@@ -100,7 +58,6 @@ const saveReservation = () => {
             confirmButtonColor: '#ff8f9a'
         });
     } else {
-        // Si no es duplicada, agrega la reserva, guarda en localStorage y muestra una alerta de éxito
         reservations.push(reservationData);
         localStorage.setItem('reservations', JSON.stringify(reservations));
         Swal.fire({
@@ -108,7 +65,6 @@ const saveReservation = () => {
             icon: 'success',
             confirmButtonColor: '#ff7987'
         });
-        // Muestra las reservas actualizadas
         displayReservations();
     }
 };
