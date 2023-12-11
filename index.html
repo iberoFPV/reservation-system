@@ -33,10 +33,10 @@
   <h2 class="system">Sistema de Reservas</h2>
   <form id="reservationForm">
     <label for="name">Nombre:</label>
-    <input type="text" id="name" required><br>
+    <input type="text" id="name" autocomplete="given-name" required><br>
 
     <label for="phone">Teléfono:</label>
-    <input type="tel" id="phone" required><br>
+    <input type="tel" id="phone" autocomplete="tel" required><br>
 
     <label for="date">Fecha:</label>
     <input type="date" id="date" required><br>
@@ -83,11 +83,11 @@
   <script src="js/main.js"></script>
 
   <!-- Google Analytics: cambia UA-XXXXX-Y para que sea el ID de tu sitio. -->
-  <script>
+<!--   <script>
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
   </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script> -->
 </body>
 
 </html>
